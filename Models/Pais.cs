@@ -24,19 +24,19 @@ public class Pais{
         atractivosTuristicos = aT;
     } 
 
-    public string ObtenerNombre(string nombre){
+    public string ObtenerNombre(){
         return nombre;
     }
-    public string ObtenerBandera(string imgBandera){
+    public string ObtenerBandera(){
         return imgBandera;
     }
-    public int ObtenerPoblacion(int poblacion){
+    public int ObtenerPoblacion(){
         return poblacion;
     }
-    public DateTime ObtenerFI(DateTime fechaIndependencia){
+    public DateTime ObtenerFI(){
         return fechaIndependencia;
     }
-    public string ObtenerAT(string atractivosTuristicos){
+    public string ObtenerAT(){
         return atractivosTuristicos;
     }
 }
