@@ -1,5 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
 
-<h1>TP XX - Index</h1>
+    <h2>Seleccione el pais!</h2>
+    @foreach (Pais item in ViewBag.listaPaises)
+    {
+        <img src = '/img/@item.ObtenerBandera();' alt= "@item.ObtenerNombre();" width="150px" height="150px">
+    }
+</body>
+</html>
