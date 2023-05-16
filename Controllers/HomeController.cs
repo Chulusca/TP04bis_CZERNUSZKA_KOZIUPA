@@ -7,10 +7,10 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         ViewBag.listaPaises = Info.ListarPais();
-        return View("");
+        return View("Index");
     }
     public IActionResult DetallePais(string pais){
         ViewBag.Pais = Info.DetallePais(pais);
-        return View("detallePais.cshtml");
+        return View("detallePais");
     }
 }
