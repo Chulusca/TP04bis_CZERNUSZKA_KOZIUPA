@@ -20,4 +20,23 @@ public static class Info{
         listaPaises.Add(Bolivia);
         listaPaises.Add(Brasil);
     } 
+    public static List<Pais> ListarPais(){
+        if (listaPaises.Count < 0) InicializarLista();
+        return listaPaises;
+    }
+    public static Pais DetallePais(string nombre){
+        int i = 0;
+        bool fueEncontrado = false;
+        int posPais = -1;
+        if(listaPaises.Count > 0){
+            while(!fueEncontrado && i < listaPaises.Count){
+                if(nombre == listaPaises[i].ObtenerNombre()){
+                    fueEncontrado = true;
+                    posPais = i;
+                }
+            }
+            if(fueEncontrado) return listaPaises[posPais];
+            else return null;
+        }else return null;
+    }
 }
