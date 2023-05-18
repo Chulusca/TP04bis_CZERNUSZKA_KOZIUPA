@@ -11,6 +11,6 @@ public class HomeController : Controller
     }
     public IActionResult DetallePais(string pais){
         ViewBag.Pais = Info.DetallePais(pais);
-        return View("detallePais");
+        return View();
     }
 }

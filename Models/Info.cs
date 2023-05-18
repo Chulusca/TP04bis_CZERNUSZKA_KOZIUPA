@@ -21,7 +21,7 @@ public static class Info{
         listaPaises.Add(Brasil);
     } 
     public static List<Pais> ListarPais(){
-        if (listaPaises.Count < 0) InicializarLista();
+        if(listaPaises.Count <= 0) InicializarLista();
         return listaPaises;
     }
     public static Pais DetallePais(string nombre){
@@ -30,10 +30,11 @@ public static class Info{
         int posPais = -1;
         if(listaPaises.Count > 0){
             while(!fueEncontrado && i < listaPaises.Count){
-                if(nombre == listaPaises[i].ObtenerNombre()){
+                if(nombre == listaPaises[i].nombre){
                     fueEncontrado = true;
                     posPais = i;
                 }
+                i++;
             }
             if(fueEncontrado) return listaPaises[posPais];
             else return null;

@@ -10,11 +10,15 @@
     <title>Paises</title>
 </head>
 <body>
-
-    <h2>Seleccione el pais!</h2>
-    @foreach (Pais item in ViewBag.listaPaises)
-    {
-        <img src = '/img/@item.ObtenerBandera();' alt= "@item.ObtenerNombre();" width="150px" height="150px">
-    }
+    <table>
+        <tr>
+            @for (int i = 0; i < ViewBag.listaPaises.Count; i++)
+            {
+                <td><a href='@Url.Action("DetallePais",new {pais = ViewBag.listaPaises[i].nombre})'>
+                    <img src = '/img/@ViewBag.listaPaises[i].imgBandera' alt= "@ViewBag.listaPaises[i].nombre" width="150px" height="150px">
+                </a></td>
+            }
+        </tr>
+    </table>
 </body>
 </html>
