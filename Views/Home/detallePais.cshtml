@@ -7,10 +7,14 @@
     <title>Detalle Pais</title>
 </head>
 <body>
+    <h1>@ViewBag.Pais.nombre</h1>
     <table>
         <tr>
             <td><img src = '/img/@ViewBag.Pais.imgBandera' alt= "ViewBag.Pais.nombre" width="400px" height="250px"></td>
         </tr>
-    </table>    
+    </table>
+    <h4>Poblacion: @ViewBag.Pais.poblacion</h4>
+    <h4>Fecha de Independencia: @ViewBag.Pais.fechaIndependencia</h4>   
+    <h4>Atractivos turisticos: @ViewBag.Pais.atractivosTuristicos</h4>
 </body>
 </html>
